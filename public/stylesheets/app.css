@@ -1,0 +1,73 @@
+.navbar-brand {
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: rgb(211, 206, 206);
+}
+
+.game {
+    border: solid 0.5px whitesmoke;
+    border-radius: 1em;
+    width: 40%;
+    height: 320px;
+    background-color: aliceblue;
+    box-shadow: 0px 1px 29px -16px rgba(66, 68, 90, 1);
+    transition: transform 0.1s ease-in-out;
+}
+
+.game:hover {
+    transform: scale(1.02);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+}
+
+.lead {
+    padding: 0 5em;
+}
+
+@media(max-width:1300px) {
+    .game {
+        width: 90%;
+    }
+
+    .lead {
+        font-size: 1.3em;
+        padding: 0 2em;
+    }
+}
+
+@media(max-width:1000px) {
+    .game {
+        width: 90%;
+    }
+
+    .lead {
+        font-size: 1em;
+        padding: 0 2em;
+    }
+}
+
+@media(max-width:720px) {
+    .game {
+        width: 90%;
+
+    }
+
+    div:has(> .game) {
+        flex-direction: column !important;
+    }
+
+    .lead {
+        font-size: 1.3em;
+        padding: 0;
+    }
+}

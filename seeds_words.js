@@ -7,7 +7,7 @@ main()
 
 async function main()
 {
-    await mongoose.connect('mongodb://127.0.0.1:27017/kck-project');
+    await mongoose.connect('mongodb://127.0.0.1:27017/kck-project2');
 }
 const filePath = 'words.csv';
 
