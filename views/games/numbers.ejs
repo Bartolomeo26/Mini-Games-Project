@@ -1,3 +1,47 @@
 <% layout('layouts/boilerplate')%>
     <link rel="stylesheet" href="/stylesheets/games.css">
-    
+    <% if(!currentUser) {%>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            You're not logged in - you won't be able to save your result!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+            <section>
+                <div class="game-info d-flex justify-content-start align-items-center flex-column">
+                    <h1 class="text-light text-center fs-1">Number Sequence Game</h1>
+                    <p class="text-light text-center fs-4">Remember the numbers and then type them. The further you make
+                        it,
+                        the
+                        more digits you will have to record in your memory!</p>
+                    <button class="btn btn-light start-button">Start</button>
+
+                </div>
+                <div class="number-show d-none">
+                    <h1 class="text-light text-center fs-1 number"></h1>
+                    <p class="text-light text-center fs-5 time-left"></p>
+                </div>
+                <div class="game-panel d-flex flex-column justify-content-start align-items-center d-none">
+                    <p class="text-light text-center fs-4 mb-0">What was the number?</p>
+                    <div class="mb-3 d-flex flex-column justify-content-start align-items-center">
+                        <label for="numberType" class="form-label text-light">Type Your Number:</label>
+                        <input type="text" id="numberType" class="form-control number-type">
+                        <button class="btn btn-light submit-button mt-2">Submit</button>
+                    </div>
+                </div>
+                <div class="game-lost d-flex justify-content-start align-items-center flex-column d-none">
+                    <h1 class="text-light text-center fs-1">You've lost!</h1>
+                    <h1 class="text-light result-info text-center fs-1"></h1>
+                    <% if(currentUser){ %>
+                        <h1 class="text-light text-center fs-1">Do you wish to save your result?</h1>
+                        <form action="/number-sequence" method="post"
+                            class="d-flex justify-content-start align-items-center flex-column">
+                            <input type="number" class="d-none" name="score" id="resultInput">
+                            <button type="submit" class="btn btn-light mb-2">YES</button>
+                        </form>
+
+                        <% } %>
+                            <button class="btn btn-info try-again">Try Again</button>
+                </div>
+            </section>
+
+            <script src="/javascripts/number.js"></script>

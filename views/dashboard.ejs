@@ -1,0 +1,44 @@
+<% layout('layouts/boilerplate')%>
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <% let i=1; %>
+        <h1 class="text-dark text-center fs-1">Dashboard of the game <span><a href="<%= path %>"
+                    class="text-info-emphasis">
+                    <%= game.name %>
+                </a>
+            </span>
+        </h1>
+        <div class="d-flex justify-content-center mt-4">
+            <table id="dashboard" class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let result of scoreboard) {%>
+                        <tr>
+                            <th scope="row">
+                                <%= i %>
+                            </th>
+                            <td>
+                                <%= result.user.username%>
+                            </td>
+                            <td>
+                                <%= result.score%>
+                            </td>
+                        </tr>
+                        <% i++; %>
+                            <% } %>
+                </tbody>
+            </table>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+        <script>
+            new DataTable('#dashboard');
+        </script>

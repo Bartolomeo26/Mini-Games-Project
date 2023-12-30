@@ -1,3 +1,51 @@
 <% layout('layouts/boilerplate')%>
     <link rel="stylesheet" href="/stylesheets/games.css">
-    
+    <% if(!currentUser) {%>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            You're not logged in - you won't be able to save your result!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+            <section>
+                <div class="game-info d-flex justify-content-start align-items-center flex-column">
+                    <h1 class="text-light text-center fs-1">Word Game</h1>
+                    <p class="text-light text-center fs-4">Remember the displayed words in order to properly guess
+                        whether
+                        one
+                        of them
+                        already appeared on the screen before or not.</p>
+                    <button class="btn btn-light start-button">Start</button>
+                </div>
+
+                <div class="game-panel d-flex flex-column justify-content-start align-items-center d-none">
+                    <div>
+                        <p class="text-light text-center fs-4 d-inline lives px-0 me-5"></p>
+                        <p class="text-light text-center fs-4 d-inline level px-0"></p>
+                    </div>
+                    <h1 class="text-light text-center fs-1 word"></h1>
+                    <div class="mb-3 d-flex justify-content-start align-items-center">
+
+                        <button class="btn btn-dark seen-button mt-2 me-3 fs-4 px-4">SEEN</button>
+                        <button class="btn btn-info new-button mt-2 fs-4 px-4">NEW</button>
+                    </div>
+                </div>
+                <div class="game-lost d-flex justify-content-start align-items-center flex-column d-none">
+                    <h1 class="text-light text-center fs-1">You've lost!</h1>
+                    <h1 class="text-light result-info text-center fs-1"></h1>
+                    <% if(currentUser){ %>
+                        <h1 class="text-light text-center fs-1">Do you wish to save your result?</h1>
+                        <form action="/words" method="post"
+                            class="d-flex justify-content-start align-items-center flex-column">
+                            <input type="number" class="d-none" name="score" id="resultInput">
+                            <button type="submit" class="btn btn-light mb-2">YES</button>
+                        </form>
+
+                        <% } %>
+                            <button class="btn btn-info try-again">Try Again</button>
+                </div>
+            </section>
+            <script>
+
+                var words = <%-JSON.stringify(words) %>
+            </script>
+            <script src="/javascripts/word.js"></script>

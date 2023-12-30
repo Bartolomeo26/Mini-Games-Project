@@ -1,3 +1,17 @@
 <% layout('layouts/boilerplate')%>
     <link rel="stylesheet" href="/stylesheets/games.css">
-    
+    <% if(!currentUser) {%>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            You're not logged in - you won't be able to save your result!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+        <section>
+            <div class="game-info d-flex justify-content-start align-items-center flex-column">
+                <h1 class="text-light text-center fs-1">Country Game</h1>
+                <p class="text-light text-center fs-4">Guess the hidden country. Use the clues displayed to you based on
+                    the
+                    previous types to guess it with the fewest attempts possible.</p>
+                <button class="btn btn-light start-button">Start</button>
+            </div>
+        </section>

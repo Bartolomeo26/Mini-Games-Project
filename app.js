@@ -14,6 +14,7 @@ const wordRoutes = require('./routes/words');
 const countryRoutes = require('./routes/countries');
 const numberSequenceRoutes = require('./routes/number_sequence');
 const simonSaysRoutes = require('./routes/simon_says');
+const dashboardRoutes = require('./routes/dashboards');
 
 
 // const { countryGame } = require('./controllers/country');
@@ -76,6 +77,7 @@ app.use('/words', wordRoutes);
 app.use('/countries', countryRoutes);
 app.use('/number-sequence', numberSequenceRoutes);
 app.use('/simon-says', simonSaysRoutes);
+app.use('/dashboard', dashboardRoutes);
 
 app.listen('3000', () =>
 {

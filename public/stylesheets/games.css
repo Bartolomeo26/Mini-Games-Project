@@ -1,3 +1,20 @@
 body {
-    background-color: rgb(134, 190, 250);
+    background-color: rgb(63, 107, 116);
+
+    display: flex;
+    justify-content: center;
+
+}
+
+section {
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+p {
+    padding: 0 5em;
+
+}
+
+.game-panel, .number-show{
+margin-top: 9em;
 }

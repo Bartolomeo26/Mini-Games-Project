@@ -1,5 +1,15 @@
 .navbar-brand {
     transition: color 0.2s ease-in-out;
+    list-style: none;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+svg {
+    margin-bottom: 0.1em;
 }
 
 .navbar-brand:hover {

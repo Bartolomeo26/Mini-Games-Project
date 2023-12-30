@@ -11,7 +11,10 @@ const gameSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: 'User'
         },
-        score: String
+        score: {
+            type: Number,
+            required: true
+        }
     }]
 
 })

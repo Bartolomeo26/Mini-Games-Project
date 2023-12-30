@@ -1,0 +1,15 @@
+a {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+@media(max-width:1000px) {
+    span {
+        display: block;
+    }
+
+}

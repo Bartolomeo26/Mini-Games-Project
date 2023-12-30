@@ -1,2 +1,16 @@
 <% layout('layouts/boilerplate')%>
     <link rel="stylesheet" href="/stylesheets/games.css">
+    <% if(!currentUser) {%>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            You're not logged in - you won't be able to save your result!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+        <section>
+            <div class="game-info d-flex justify-content-start align-items-center flex-column">
+                <h1 class="text-light text-center fs-1">Simon Says Game</h1>
+                <p class="text-light text-center fs-4">Memorize the pattern and press the tiles in the correct sequence
+                    which only gets longer the further you make it.</p>
+                <button class="btn btn-light start-button">Start</button>
+            </div>
+        </section>
