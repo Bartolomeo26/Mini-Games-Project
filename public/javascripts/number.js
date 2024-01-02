@@ -27,7 +27,7 @@ startButton.addEventListener('click', async () =>
 {
     if (alert)
         alert.classList.add('d-none');
-    gameInfo.classList.add('d-none');
+    gameInfo.classList.toggle('d-none');
 
     numberShow.classList.toggle('d-none');
     randomNumber = generateRandomSequence();

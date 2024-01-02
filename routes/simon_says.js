@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const catchAsync = require('../utils/catchAsync');
+const simonController = require('../controllers/simon_says')
 
 router.route('/')
-    .get((req, res) => { res.render('games/simon_says') })
-//.post(catchAsync(words.saveResults))
+    .get(simonController.displayGame)
+    .post(catchAsync(simonController.saveResult))
 
 module.exports = router;

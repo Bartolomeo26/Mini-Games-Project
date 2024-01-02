@@ -1,0 +1,51 @@
+.sequence-button {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(50, 91, 99);
+    margin-bottom: 1em;
+    border: 0;
+}
+
+.sequence-panel {
+    margin-top: 1em;
+    width: 350px;
+    flex-wrap: wrap;
+}
+
+.game-panel-sequence {
+    margin-top: 1em;
+}
+
+.sequence-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 0;
+}
+
+.sequence-button:active {
+    background-color: white;
+    border: 0;
+}
+
+
+@keyframes blinkColor {
+    25% {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    75% {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
+.blink-class {
+    animation: blinkColor 0.4s ease-in-out alternate 2;
+}
+

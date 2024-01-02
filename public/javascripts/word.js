@@ -88,7 +88,7 @@ seenButton.addEventListener('click', async () =>
 const displayNewWord = () =>
 {
     randomNumber = Math.floor(Math.random() * 9 + 1);
-    if (randomNumber >= 4 || counter < 2)
+    if (randomNumber % 2 != 0 || counter < 2)
     {
         randomWordNumber = Math.floor(Math.random() * words.length);
         randomWord = words[randomWordNumber].name;

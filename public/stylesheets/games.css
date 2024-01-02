@@ -1,9 +1,6 @@
 body {
     background-color: rgb(63, 107, 116);
-
-    display: flex;
-    justify-content: center;
-
+    min-height: 100vh;
 }
 
 section {
@@ -15,6 +12,45 @@ p {
 
 }
 
-.game-panel, .number-show{
-margin-top: 9em;
+.game-panel,
+.number-show {
+    margin-top: 9em;
+}
+
+
+
+.game-logo {
+    width: 80px;
+    height: 80px;
+    animation: blink 2.5s linear infinite;
+
+}
+
+.game-logo-numbers {
+    border: solid;
+    border-radius: 25%;
+    padding: 1em;
+}
+
+
+@keyframes blink {
+    25% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    75% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.level {
+    opacity: 80%;
 }
