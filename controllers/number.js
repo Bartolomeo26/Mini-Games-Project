@@ -1,9 +1,11 @@
 const Game = require('../models/game');
+const numberSequenceModel = require('../models/number_sequence');
 
 module.exports.displayGame = (req, res) =>
 {
 
-    res.render('games/numbers');
+    res.render('games/numbers', {numberSequenceModel});
+    
 
 }
 module.exports.saveResult = async (req, res) =>

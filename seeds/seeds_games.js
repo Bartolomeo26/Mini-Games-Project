@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Game = require('./models/game');
+const Game = require('../models/game');
 main()
     .then(() => console.log("Mongo connection working"))
     .catch(err => console.log(err));

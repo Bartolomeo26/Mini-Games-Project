@@ -21,11 +21,11 @@
     border: 0;
 }
 
-.sequence-button:active {
+.sequence-panel button.sequence-button:active {
+
     background-color: white;
     border: 0;
 }
-
 
 @keyframes blinkColor {
     25% {
@@ -48,4 +48,3 @@
 .blink-class {
     animation: blinkColor 0.4s ease-in-out alternate 2;
 }
-

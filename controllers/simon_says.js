@@ -1,9 +1,10 @@
 const Game = require('../models/game');
+const simonSaysModel = require('../models/simon_says');
 
 module.exports.displayGame = (req, res) =>
 {
 
-    res.render('games/simon_says');
+    res.render('games/simon_says', {simonSaysModel});
 
 }
 module.exports.saveResult = async (req, res) =>

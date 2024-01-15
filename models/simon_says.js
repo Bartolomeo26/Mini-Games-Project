@@ -1,7 +1,7 @@
 const simonSaysModel = {
     sequence: [],
-    result: 0,
-    isOver: false,
+    index: 0,
+    counter: 0,
     randomNumber: 0
 };
 

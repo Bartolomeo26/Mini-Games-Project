@@ -16,20 +16,6 @@ const numberSequenceRoutes = require('./routes/number_sequence');
 const simonSaysRoutes = require('./routes/simon_says');
 const dashboardRoutes = require('./routes/dashboards');
 
-
-// const { countryGame } = require('./controllers/country');
-// const { simonSaysGame } = require('./controllers/simon_says');
-// const { wordGame } = require('./controllers/word');
-// const { numberSequenceGame } = require('./controllers/number_sequence');
-// const { sleepFunction } = require('./utils/sleepFunction');
-// const { sortDesc, sortAsc } = require('./utils/sortingFunctions');
-// const Game = require('./models/game')
-// const mainView = require('./views/main')
-// const mainModel = require('./models/main');
-// const user = require('./controllers/user');
-// const mainController = require('./controllers/main');
-
-
 main()
     .then(() => console.log("Mongo connection working!"))
     .catch(err => console.log(err));

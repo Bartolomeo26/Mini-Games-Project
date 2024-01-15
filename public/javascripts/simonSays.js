@@ -18,17 +18,12 @@ const tryAgain = document.querySelector('.try-again');
 const timeLeft = document.querySelector('.time-left');
 const level = document.querySelector('.level');
 const alert = document.querySelector('.alert');
-let randomNumber = null;
-let counter = 0;
-let index = 0;
-let sequence = [];
-let time = 1000;
 
 tryAgain.addEventListener('click', async () =>
 {
-    index = 0;
-    sequence = [];
-    counter = 0;
+    model.index = 0;
+    model.sequence = [];
+    model.counter = 0;
     gameInfo.classList.toggle('d-none');
     gameLost.classList.toggle('d-none');
 })
@@ -36,7 +31,7 @@ tryAgain.addEventListener('click', async () =>
 startButton.addEventListener('click', async () =>
 {
     
-    level.innerHTML = `Level: ${counter}`;
+    level.innerHTML = `Level: ${model.counter}`;
     if (alert)
         alert.classList.add('d-none');
     gameInfo.classList.toggle('d-none');
@@ -50,15 +45,15 @@ startButton.addEventListener('click', async () =>
 
 button1.addEventListener('click', async () =>
 {
-    if (sequence[index] === 1)
+    if (model.sequence[model.index] === 1)
     {
 
-        index++;
-        if (index === sequence.length)
+        model.index++;
+        if (model.index === model.sequence.length)
         {
-            index = 0;
-            counter++;
-            level.innerHTML = `Level: ${counter}`;
+            model.index = 0;
+            model.counter++;
+            level.innerHTML = `Level: ${model.counter}`;
             displaySequence();
         }
     }
@@ -70,16 +65,16 @@ button1.addEventListener('click', async () =>
 })
 button2.addEventListener('click', async () =>
 {
-    if (sequence[index] === 2)
+    if (model.sequence[model.index] === 2)
     {
 
-        index++;
-        if (index === sequence.length)
+        model.index++;
+        if (model.index === model.sequence.length)
         {
 
-            index = 0;
-            counter++;
-            level.innerHTML = `Level: ${counter}`;
+            model.index = 0;
+            model.counter++;
+            level.innerHTML = `Level: ${model.counter}`;
             displaySequence();
         }
     }
@@ -91,16 +86,16 @@ button2.addEventListener('click', async () =>
 })
 button3.addEventListener('click', async () =>
 {
-    if (sequence[index] === 3)
+    if (model.sequence[model.index] === 3)
     {
 
-        index++;
-        if (index === sequence.length)
+        model.index++;
+        if (model.index === model.sequence.length)
         {
 
-            index = 0;
-            counter++;
-            level.innerHTML = `Level: ${counter}`;
+            model.index = 0;
+            model.counter++;
+            level.innerHTML = `Level: ${model.counter}`;
             displaySequence();
         }
     }
@@ -112,17 +107,17 @@ button3.addEventListener('click', async () =>
 })
 button4.addEventListener('click', async () =>
 {
-    if (sequence[index] === 4)
+    if (model.sequence[model.index] === 4)
     {
 
-        index++;
-        if (index === sequence.length)
+        model.index++;
+        if (model.index === model.sequence.length)
         {
 
 
-            index = 0;
-            counter++;
-            level.innerHTML = `Level: ${counter}`;
+            model.index = 0;
+            model.counter++;
+            level.innerHTML = `Level: ${model.counter}`;
             displaySequence();
         }
     }
@@ -134,16 +129,16 @@ button4.addEventListener('click', async () =>
 })
 button5.addEventListener('click', async () =>
 {
-    if (sequence[index] === 5)
+    if (model.sequence[model.index] === 5)
     {
 
-        index++;
-        if (index === sequence.length)
+        model.index++;
+        if (model.index === model.sequence.length)
         {
 
-            index = 0;
-            counter++;
-            level.innerHTML = `Level: ${counter}`;
+            model.index = 0;
+            model.counter++;
+            level.innerHTML = `Level: ${model.counter}`;
             displaySequence();
         }
     }
@@ -155,17 +150,17 @@ button5.addEventListener('click', async () =>
 })
 button6.addEventListener('click', async () =>
 {
-    if (sequence[index] === 6)
+    if (model.sequence[model.index] === 6)
     {
 
-        index++;
-        if (index === sequence.length)
+        model.index++;
+        if (model.index === model.sequence.length)
         {
 
 
-            index = 0;
-            counter++;
-            level.innerHTML = `Level: ${counter}`;
+            model.index = 0;
+            model.counter++;
+            level.innerHTML = `Level: ${model.counter}`;
             displaySequence();
         }
     }
@@ -177,16 +172,16 @@ button6.addEventListener('click', async () =>
 })
 button7.addEventListener('click', async () =>
 {
-    if (sequence[index] === 7)
+    if (model.sequence[model.index] === 7)
     {
 
-        index++;
-        if (index === sequence.length)
+        model.index++;
+        if (model.index === model.sequence.length)
         {
 
-            index = 0;
-            counter++;
-            level.innerHTML = `Level: ${counter}`;
+            model.index = 0;
+            model.counter++;
+            level.innerHTML = `Level: ${model.counter}`;
             displaySequence();
         }
     }
@@ -197,17 +192,17 @@ button7.addEventListener('click', async () =>
 })
 button8.addEventListener('click', async () =>
 {
-    if (sequence[index] === 8)
+    if (model.sequence[model.index] === 8)
     {
 
-        index++;
-        if (index === sequence.length)
+        model.index++;
+        if (model.index === model.sequence.length)
         {
 
 
-            index = 0;
-            counter++;
-            level.innerHTML = `Level: ${counter}`;
+            model.index = 0;
+            model.counter++;
+            level.innerHTML = `Level: ${model.counter}`;
             displaySequence();
         }
     }
@@ -218,16 +213,16 @@ button8.addEventListener('click', async () =>
 })
 button9.addEventListener('click', async () =>
 {
-    if (sequence[index] === 9)
+    if (model.sequence[model.index] === 9)
     {
 
-        index++;
-        if (index === sequence.length)
+        model.index++;
+        if (model.index === model.sequence.length)
         {
 
-            index = 0;
-            counter++;
-            level.innerHTML = `Level: ${counter}`;
+            model.index = 0;
+            model.counter++;
+            level.innerHTML = `Level: ${model.counter}`;
             displaySequence();
         }
     }
@@ -242,9 +237,9 @@ const gameIsLost = () =>
 {
     gamePanel.classList.toggle('d-none');
     gameLost.classList.toggle('d-none');
-    resultInfo.innerHTML = `Your result: ${counter}`;
+    resultInfo.innerHTML = `Your result: ${model.counter}`;
     if (resultInput)
-        resultInput.value = counter;
+        resultInput.value = model.counter;
 }
 
 const sleepFunction = (time) =>
@@ -255,18 +250,17 @@ const sleepFunction = (time) =>
 const displaySequence = async () =>
 {
     await sleepFunction(1000);
-    randomNumber = Math.floor(Math.random() * 9 + 1);
-    sequence.push(randomNumber);
+    model.randomNumber = Math.floor(Math.random() * 9 + 1);
+    model.sequence.push(model.randomNumber);
 
 
-    for (let i = 0; i <= counter; i++)
+    for (let i = 0; i <= model.counter; i++)
     {
-        const buttonNumber = sequence[i];
-       console.log(sequence);
-       
+
+        const buttonNumber = model.sequence[i];
         buttons[buttonNumber - 1].classList.add('blink-class');
 
-        await sleepFunction(1200);
+        await sleepFunction(1000);
         buttons[buttonNumber - 1].classList.remove('blink-class');
         await sleepFunction(100);
     }

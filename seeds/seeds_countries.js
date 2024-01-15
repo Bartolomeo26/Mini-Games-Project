@@ -1,5 +1,5 @@
 const fs = require('fs');
-const Country = require('./models/country');
+const Country = require('../models/country');
 const mongoose = require('mongoose');
 main()
     .then(() => console.log("Mongo connection working"))

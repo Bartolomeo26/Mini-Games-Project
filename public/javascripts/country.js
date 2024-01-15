@@ -56,20 +56,17 @@ startButton.addEventListener('click', async () =>
 
     gameInfo.classList.toggle('d-none');
     gamePanel.classList.toggle('d-none');
-
-
+    countryInput.focus();
     randomNumber = Math.floor(Math.random() * countries.length);
     randomCountry = countries[randomNumber];
     endpoint = { lat: randomCountry.latitude, lng: randomCountry.longitude };
-    console.log(randomCountry.name)
-
 
 })
 
 countryForm.addEventListener('submit', async (e) =>
 {
     e.preventDefault();
-
+    
     guessedCountry = countryInput.value;
     guessedCountry = countries.find((country) =>
     {

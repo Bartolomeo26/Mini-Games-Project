@@ -1,5 +1,5 @@
 const fs = require('fs');
-const Word = require('./models/word');
+const Word = require('../models/word');
 const mongoose = require('mongoose');
 main()
     .then(() => console.log("Mongo connection working"))
