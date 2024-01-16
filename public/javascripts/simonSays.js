@@ -19,18 +19,9 @@ const timeLeft = document.querySelector('.time-left');
 const level = document.querySelector('.level');
 const alert = document.querySelector('.alert');
 
-tryAgain.addEventListener('click', async () =>
-{
-    model.index = 0;
-    model.sequence = [];
-    model.counter = 0;
-    gameInfo.classList.toggle('d-none');
-    gameLost.classList.toggle('d-none');
-})
-
 startButton.addEventListener('click', async () =>
 {
-    
+
     level.innerHTML = `Level: ${model.counter}`;
     if (alert)
         alert.classList.add('d-none');
@@ -38,9 +29,15 @@ startButton.addEventListener('click', async () =>
     gamePanel.classList.toggle('d-none');
 
     displaySequence();
+})
 
-
-
+tryAgain.addEventListener('click', async () =>
+{
+    model.index = 0;
+    model.sequence = [];
+    model.counter = 0;
+    gameInfo.classList.toggle('d-none');
+    gameLost.classList.toggle('d-none');
 })
 
 button1.addEventListener('click', async () =>
@@ -71,7 +68,6 @@ button2.addEventListener('click', async () =>
         model.index++;
         if (model.index === model.sequence.length)
         {
-
             model.index = 0;
             model.counter++;
             level.innerHTML = `Level: ${model.counter}`;
@@ -92,7 +88,6 @@ button3.addEventListener('click', async () =>
         model.index++;
         if (model.index === model.sequence.length)
         {
-
             model.index = 0;
             model.counter++;
             level.innerHTML = `Level: ${model.counter}`;
@@ -113,8 +108,6 @@ button4.addEventListener('click', async () =>
         model.index++;
         if (model.index === model.sequence.length)
         {
-
-
             model.index = 0;
             model.counter++;
             level.innerHTML = `Level: ${model.counter}`;
@@ -135,7 +128,6 @@ button5.addEventListener('click', async () =>
         model.index++;
         if (model.index === model.sequence.length)
         {
-
             model.index = 0;
             model.counter++;
             level.innerHTML = `Level: ${model.counter}`;
@@ -156,8 +148,6 @@ button6.addEventListener('click', async () =>
         model.index++;
         if (model.index === model.sequence.length)
         {
-
-
             model.index = 0;
             model.counter++;
             level.innerHTML = `Level: ${model.counter}`;
@@ -178,7 +168,6 @@ button7.addEventListener('click', async () =>
         model.index++;
         if (model.index === model.sequence.length)
         {
-
             model.index = 0;
             model.counter++;
             level.innerHTML = `Level: ${model.counter}`;
@@ -198,8 +187,6 @@ button8.addEventListener('click', async () =>
         model.index++;
         if (model.index === model.sequence.length)
         {
-
-
             model.index = 0;
             model.counter++;
             level.innerHTML = `Level: ${model.counter}`;
@@ -219,7 +206,6 @@ button9.addEventListener('click', async () =>
         model.index++;
         if (model.index === model.sequence.length)
         {
-
             model.index = 0;
             model.counter++;
             level.innerHTML = `Level: ${model.counter}`;

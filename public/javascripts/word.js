@@ -17,15 +17,6 @@ let correctAnswer, randomWord, randomWordNumber;
 let seenWords = [];
 let lives = 3;
 
-tryAgain.addEventListener('click', async () =>
-{
-    seenWords = [];
-    counter = 0;
-    lives = 3;
-    gameInfo.classList.toggle('d-none');
-    gameLost.classList.toggle('d-none');
-})
-
 startButton.addEventListener('click', async () =>
 {
     if (alert)
@@ -37,15 +28,23 @@ startButton.addEventListener('click', async () =>
     displayNewWord();
     updateLivesAndScore();
 })
+
+tryAgain.addEventListener('click', async () =>
+{
+    seenWords = [];
+    counter = 0;
+    lives = 3;
+    gameInfo.classList.toggle('d-none');
+    gameLost.classList.toggle('d-none');
+})
+
 newButton.addEventListener('click', async () =>
 {
 
     if (correctAnswer === 'new')
     {
-
         counter++;
         displayNewWord();
-
     }
     else
     {

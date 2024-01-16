@@ -18,37 +18,6 @@ let randomNumber;
 let randomCountry, guessedCountry;
 let endpoint, startpoint;
 
-
-tryAgain[0].addEventListener('click', async () =>
-{
-    counter = 1;
-    gameInfo.classList.toggle('d-none');
-    gameWon.classList.toggle('d-none');
-    
-    countryTips.innerHTML = '';
-
-    countryInput.disabled = false;
-})
-
-tryAgain[1].addEventListener('click', async () =>
-{
-    counter = 1;
-    gameInfo.classList.toggle('d-none');
-    gameLost.classList.toggle(`d-none`);
-    
-    countryTips.innerHTML = '';
-
-    countryInput.disabled = false;
-})
-
-buttonSurrender.addEventListener('click', async () =>
-{
-    countryInput.disabled = true;
-    countryInfo[1].innerHTML = `The country you were looking for was <strong class="text-info">${randomCountry.name}</strong>`;
-    gameLost.classList.toggle(`d-none`);
-    gamePanel.classList.toggle('d-none');
-})
-
 startButton.addEventListener('click', async () =>
 {
     if (alert)
@@ -63,10 +32,32 @@ startButton.addEventListener('click', async () =>
 
 })
 
+for (let i = 0; i <= 1; i++)
+{
+    tryAgain[i].addEventListener('click', async () =>
+    {
+        counter = 1;
+        gameInfo.classList.toggle('d-none');
+        if (i == 0) gameWon.classList.toggle('d-none');
+        else gameLost.classList.toggle(`d-none`);
+        countryTips.innerHTML = '';
+
+        countryInput.disabled = false;
+    })
+}
+
+buttonSurrender.addEventListener('click', async () =>
+{
+    countryInput.disabled = true;
+    countryInfo[1].innerHTML = `The country you were looking for was <strong class="text-info">${randomCountry.name}</strong>`;
+    gameLost.classList.toggle(`d-none`);
+    gamePanel.classList.toggle('d-none');
+})
+
 countryForm.addEventListener('submit', async (e) =>
 {
     e.preventDefault();
-    
+
     guessedCountry = countryInput.value;
     guessedCountry = countries.find((country) =>
     {
@@ -94,7 +85,6 @@ countryForm.addEventListener('submit', async (e) =>
     else
     {
         counter++;
-
     }
     countryInput.value = '';
 
@@ -194,6 +184,7 @@ const directionCalculation = (endpoint, startpoint) =>
 
     var coordNames = ["N", "NE", "E", "SE", "S", "SW", "W", "NW", "N"];
     var coordIndex = Math.round(compassReading / 45);
+    if((compassReading / 45) === 0) return "PERFECT"
     if (coordIndex < 0)
     {
         coordIndex = coordIndex + 8
