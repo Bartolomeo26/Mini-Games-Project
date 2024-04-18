@@ -11,7 +11,7 @@ async function main()
 }
 
 // Replace 'your_file.csv' with the path to your actual CSV file
-const filePath = 'countries.csv';
+const filePath = '../data/countries.csv';
 
 
 // Step 1: Read the contents of the CSV file

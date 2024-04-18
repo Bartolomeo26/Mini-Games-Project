@@ -9,7 +9,7 @@ async function main()
 {
     await mongoose.connect('mongodb://127.0.0.1:27017/kck-project2');
 }
-const filePath = 'words.csv';
+const filePath = '../data/words.csv';
 
 
 // Step 1: Read the contents of the CSV file
