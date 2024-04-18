@@ -23,7 +23,7 @@ mongo
 nodemon app.js
 ```
 
-The very first thing that the user see is the home page presenting 4 tiles, each related to different mini-game. The navbar at the top of the website has two options in the top right corner - sign in and then log in which allow anyone to have the possibility to save the results after every game.
+The very first thing that the user sees is the home page presenting 4 tiles, each related to different mini-game. The navbar at the top of the website has two options in the top right corner - sign in and then log in which allow anyone to have the possibility to save the results after every game.
 
 ![image](https://github.com/Bartolomeo26/Mini-Games-Project/assets/64313992/1a2d2d53-eeaa-4b8b-9c69-6a2353f4f5f1)
 
@@ -31,7 +31,7 @@ The dashboard option is there to see all the results other people managed to get
 
 ![image](https://github.com/Bartolomeo26/Mini-Games-Project/assets/64313992/0c277a31-2b6d-486c-9b93-01eb52cad1af)
 
-The website offers four games, each testing different skills related to memory and geographical knowledge. The descriptions of them are as follows.
+The website offers four games, each testing different skills related to memory and geographical knowledge. The descriptions of them and the screens presenting the course of the games are as follows.
 
 Country Game - user is supposed to guess which country it is based on the clues from the previous types!
 
