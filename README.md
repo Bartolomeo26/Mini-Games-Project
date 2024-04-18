@@ -15,10 +15,17 @@ npm install
 ```
 
 # Using the application
-After installing all the dependencies, the next step is to run the local database (MongoDB) and then start the application with two simple commands.
+After installing all the dependencies, the next step is to run the local database (MongoDB), seed the database and then start the application.
+Running the database:
 ```bash
 mongo
 ```
+Seeding the database:
+```bash
+cd seeds
+node seeds_countries.js seeds_games.js seeds_words.js
+```
+Start the application:
 ```bash
 nodemon app.js
 ```
